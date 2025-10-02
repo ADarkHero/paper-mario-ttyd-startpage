@@ -249,11 +249,12 @@
 							<div class="col-md-2">
 								<img src="img/menu/stats/star_point.png" />
 							</div>
-							<div class="col-md-4 text-start">
-								Star Point
+							<div class="col-md-5 text-start">
+								Budget<br />
+								<small>Naechster Monat</small>
 							</div>
-							<div class="col-md-6 text-end pr-1rem">
-								uwu
+							<div class="col-md-5 text-end pr-1rem">
+								<span id="budget">Sie sind pleite. owo</span>
 							</div>
 						</div>
 						
@@ -357,18 +358,6 @@
 								</div>
 								<div class="col-md-8 text-start">
 									Hover effect on images
-								</div>
-								<div class="col-md-2 text-start">
-									<img src="img/menu/delete.png" />
-								</div>
-							</div>
-							
-							<div class="row d-flex align-items-center background-paper pt-1 pb-1 mt-1">
-								<div class="col-md-2">
-									<img src="img/menu/badges/bougyo_pura_3d.png" />
-								</div>
-								<div class="col-md-8 text-start">
-									Budget via Sheets
 								</div>
 								<div class="col-md-2 text-start">
 									<img src="img/menu/delete.png" />
@@ -530,9 +519,13 @@
 					  </div>
 				  </div>
 				  <div class="row">
-					  <div class="col-md-12 mb-3">
-						<label for="textfileInput" class="form-label">Textdatei Dateipfad / fuer externe Notizen</label>
-						<input type="text" class="form-control" id="textfileInput" placeholder="z.B. txt/notes.txt oder https://www.example.com/txt/notes.txt"  data-bs-toggle="tooltip" title="z.B. txt/notes.txt oder https://www.example.com/txt/notes.txt">
+					  <div class="col-md-6 mb-3">
+						<label for="textfileInput" class="form-label">Notizen Textdatei</label>
+						<input type="text" class="form-control" id="textfileInput" placeholder="z.B. txt/notes.txt oder https://www.example.com/txt/notes.txt"  data-bs-toggle="tooltip" title="fuer externe Notizen z.B. txt/notes.txt oder https://www.example.com/txt/notes.txt">
+					  </div>
+					  <div class="col-md-6 mb-3">
+						<label for="budgetInput" class="form-label">Budget Textdatei</label>
+						<input type="text" class="form-control" id="budgetInput" placeholder="z.B. txt/notes.txt oder https://www.example.com/txt/notes.txt"  data-bs-toggle="tooltip" title="Liest dein derzeitiges Budget aus einer txt/csv Datei aus z.B. txt/notes.txt oder https://www.example.com/txt/notes.txt">
 					  </div>
 				  </div>
 				  <div class="row">
@@ -564,15 +557,16 @@
 <!---------------------------------------------------------------------------------------------------------
 	JavaScript files
 ---------------------------------------------------------------------------------------------------------->
-	
+	<!--
 	<script src="js/weather.js"></script>
 	<script src="js/clock.js"></script>
 	<script src="js/search.js"></script>
 	<script src="js/stocks.js"></script>
 	<script src="js/readtxt.js"></script> 
 	<script src="js/bookmark.js"></script> 
+	<script src="js/title.js"></script>-->
+	<script src="js/budget.js"></script> 
 	<script src="js/settings.js"></script> 
-	<script src="js/title.js"></script>
 	
 	<script>
 		const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');

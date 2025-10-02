@@ -11,6 +11,7 @@ document.getElementById('fullscreenFormModal').addEventListener('shown.bs.modal'
   document.getElementById("textfileInput").value = localStorage.getItem("textfile");
   document.getElementById("bookmarkInput").value = localStorage.getItem("bookmark");
   document.getElementById("bookmarkimgInput").value = localStorage.getItem("bookmarkimg");
+  document.getElementById("budgetInput").value = localStorage.getItem("budget");
 
 });
 
@@ -29,6 +30,7 @@ document.getElementById("settingsForm").addEventListener("submit", function (eve
   localStorage.setItem("textfile", document.getElementById("textfileInput").value);
   localStorage.setItem("bookmark", document.getElementById("bookmarkInput").value);
   localStorage.setItem("bookmarkimg", document.getElementById("bookmarkimgInput").value);
+  localStorage.setItem("budget", document.getElementById("budgetInput").value);
 
   // Close form
   const modal = bootstrap.Modal.getInstance(document.getElementById("fullscreenFormModal"));

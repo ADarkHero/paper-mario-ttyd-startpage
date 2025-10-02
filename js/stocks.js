@@ -65,4 +65,4 @@ var stockStr = "";
 			const el = document.getElementById("stockName");
 			if (el) el.innerHTML  = localStorage.getItem("stock");
 		  })
-		  .catch(err => console.error("Fehler beim Abrufen:", err));
+		  .catch(err => console.error("Error getting stocks: ", err));
