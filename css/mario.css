@@ -24,6 +24,9 @@ img{
 	max-width: 100%;
 	max-height: 3rem; /* So everything fits on the screen on 1080p */
 }
+img:hover{
+	opacity: 0.75;
+}
 
 h1, h2, h5{
 	font-family: 'SuperMario256';
@@ -136,6 +139,10 @@ small{
 
 .no-filter{
 	filter: none !important;
+}
+
+.no-img-hover-effect img:hover{
+	opacity: unset !important;
 }
 
 .weather{

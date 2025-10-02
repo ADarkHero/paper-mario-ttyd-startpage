@@ -103,7 +103,7 @@
 	Animated main picture
 ---------------------------------------------------------------------------------------------------------->
 						
-						<div class="col-md-6">
+						<div class="col-md-6 no-img-hover-effect">
 							<img src='img/mario/vivian.png' onmouseover="this.src='img/mario/vivian_anim.png';" onmouseout="this.src='img/mario/vivian.png';" class="no-max-height" />
 							<br /><br />
 							
@@ -218,7 +218,7 @@
 								<div class="weather-orbs" id="weatherOrbs">
 
 								</div>
-								<div class="mt-2">
+								<div class="mt-1">
 									<span class="text-start" id="weatherTodayStr">Wolkig mit Aussicht auf Fleischbällchen.</span>
 								</div>
 							</div>
@@ -245,9 +245,14 @@
 						</div>
 					</div>
 					<div class="mx-auto background-paper mt-3">
+					
+<!---------------------------------------------------------------------------------------------------------
+	Budget
+---------------------------------------------------------------------------------------------------------->
+
 						<div class="row d-flex align-items-center pt-1 pb-1">
 							<div class="col-md-2">
-								<img src="img/menu/stats/star_point.png" />
+								<img src="img/menu/stats/coin.png" /> 
 							</div>
 							<div class="col-md-5 text-start">
 								Budget<br />
@@ -263,7 +268,7 @@
 ---------------------------------------------------------------------------------------------------------->						
 						<div class="row d-flex align-items-center pt-1 pb-1 mt-2">
 							<div class="col-md-2">
-								<img src="img/menu/stats/coin.png" /> 
+								<img src="img/menu/stats/star_point.png" />
 							</div>
 							<div class="col-md-4 text-start">
 								<span id="stockName">A1JX52</span>
@@ -357,18 +362,6 @@
 									<img src="img/menu/badges/bougyo_pura_3d.png" />
 								</div>
 								<div class="col-md-8 text-start">
-									Hover effect on images
-								</div>
-								<div class="col-md-2 text-start">
-									<img src="img/menu/delete.png" />
-								</div>
-							</div>
-							
-							<div class="row d-flex align-items-center background-paper pt-1 pb-1 mt-1">
-								<div class="col-md-2">
-									<img src="img/menu/badges/bougyo_pura_3d.png" />
-								</div>
-								<div class="col-md-8 text-start">
 									Error Handling lul
 								</div>
 								<div class="col-md-2 text-start">
@@ -418,18 +411,6 @@
 								</div>
 								<div class="col-md-8 text-start">
 									Bookmarks in 1080p vewwy smol
-								</div>
-								<div class="col-md-2 text-start">
-									<img src="img/menu/delete.png" />
-								</div>
-							</div>
-							
-							<div class="row d-flex align-items-center background-paper pt-1 pb-1 mt-1">
-								<div class="col-md-2">
-									<img src="img/menu/badges/bougyo_pura_3d.png" />
-								</div>
-								<div class="col-md-8 text-start">
-									Reload once an hour.
 								</div>
 								<div class="col-md-2 text-start">
 									<img src="img/menu/delete.png" />
@@ -510,7 +491,7 @@
 				  </div>
 				  <div class="row">
 					  <div class="col-md-6 mb-3">
-						<label for="alphavantageInput" class="form-label">Alphavantage API-Key / fuer Aktienanbindung</label>
+						<label for="alphavantageInput" class="form-label">Alphavantage API-Key fuer Aktienanbindung</label>
 						<input type="text" class="form-control" id="alphavantageInput" placeholder="z.B. T69XQUAZERUWU69I" data-bs-toggle="tooltip" title="z.B. T69XQUAZERUWU69I">
 					  </div>
 					  <div class="col-md-6 mb-3">
@@ -535,7 +516,7 @@
 					  </div>
 					  <div class="col-md-6 mb-3">
 						<label for="bookmarkimgInput" class="form-label">Bilderliste fuer Linkliste</label>
-						<textarea class="form-control" id="bookmarkimgInput" rows="3" data-bs-toggle="tooltip" title="1 Bild pro Zeile, maximal 21 Links / bestenfalls 64x64px, wird ansonsten automatisch verkleinert"></textarea>
+						<textarea class="form-control" id="bookmarkimgInput" rows="3" data-bs-toggle="tooltip" title="1 Bild pro Zeile, maximal 21 Links / bestenfalls 64x64px, wird ansonsten automatisch verkleinert / Die Reihenfolge muss mit der Linkliste übereinstimmen"></textarea>
 					  </div>
 				  </div>
 			  </div>
@@ -557,14 +538,14 @@
 <!---------------------------------------------------------------------------------------------------------
 	JavaScript files
 ---------------------------------------------------------------------------------------------------------->
-	<!--
+
 	<script src="js/weather.js"></script>
 	<script src="js/clock.js"></script>
 	<script src="js/search.js"></script>
 	<script src="js/stocks.js"></script>
 	<script src="js/readtxt.js"></script> 
 	<script src="js/bookmark.js"></script> 
-	<script src="js/title.js"></script>-->
+	<script src="js/title.js"></script>
 	<script src="js/budget.js"></script> 
 	<script src="js/settings.js"></script> 
 	
@@ -572,5 +553,14 @@
 		const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
 		tooltipTriggerList.forEach(el => new bootstrap.Tooltip(el));
 	</script>
+	
+	<script>
+	  // 3600000 ms = 1 h
+	  // Reload site once per hour
+	  setTimeout(() => {
+		location.reload();
+	  }, 3600000);
+	</script>
+
   </body>
 </html>
