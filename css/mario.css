@@ -1,0 +1,154 @@
+@font-face {
+    font-family: 'HeyGorgeous'; /*a name to be used later*/
+    src: url('../font/heygorgeous.ttf'); /*URL to font*/
+}
+
+@font-face {
+    font-family: 'SuperMario256'; /*a name to be used later*/
+    src: url('../font/SuperMario256.ttf'); /*URL to font*/
+}
+
+a{
+	color: black;
+}
+
+body{
+	font-family: 'HeyGorgeous';
+	font-size: 0.85rem;
+	color: black;
+	background-color: #ccc !important;
+	background: url("../img/background_pattern.png");
+}
+
+img{
+	max-width: 100%;
+}
+
+h1, h2, h5{
+	font-family: 'SuperMario256';
+}
+
+h2{
+	display: inline;
+}
+
+small{
+	font-size: 0.5rem;
+}
+
+::placeholder {
+  color: #999 !important;
+}
+
+.a-active{
+	color: #666 !important;
+}
+
+.background-1{
+	background-color: pink !important;
+	background: url("../img/background_pattern.png");
+}
+
+.background-2{
+	background-color: green !important;
+	background: url("../img/background_pattern.png");
+}
+
+.background-paper{
+	background: url("../img/background_paper.png");
+	border: 2px solid black;
+}
+
+.background-none{
+	background: url("");
+}
+
+.hero-search{
+	background: none;
+	border: none;
+    border-bottom: 2px solid black;
+	border-radius: 0 !important;
+	box-shadow: none !important;
+	color: black !important;
+}
+.hero-search:focus{
+	background: none;
+	border-bottom: 2px solid black;
+}
+
+.hidden-force {
+  display: none !important;
+}
+
+.row{
+	margin-left: 0.25rem !important;
+	margin-right: 0.25rem !important;
+}
+.no-padding{
+	padding: 0 !important;
+	padding-left: 0 !important;
+	padding-right: 0 !important;
+	padding-top: 0 !important;
+	padding-bottom: 0 !important;
+}
+
+.no-margin{
+	margin: 0 !important;
+	margin-left: 0 !important;
+	margin-right: 0 !important;
+	margin-top: 0 !important;
+	margin-bottom: 0 !important;
+}
+
+.pr-1rem{
+	padding-right: 1rem;
+}
+
+.speech-bubble img{
+	filter: drop-shadow(0.25rem 0.25rem 0.25rem #000);
+}
+
+.speech-bubble-overlay {
+    position: absolute;
+    width: 66.66%;
+    height: 66.66%;
+}
+
+.speech-bubble-overlay-left{
+	top: 15%;
+    left: 9%;
+}
+
+.speech-bubble-overlay-right{
+	top: 15%;
+    left: 27%;
+}
+
+.speech-bubble-wrapper{
+	display: inline-block; 
+	position: relative;
+}
+
+.no-filter{
+	filter: none !important;
+}
+
+.weather{
+	font-size: 0.75em;
+}
+
+.weather-orbs {
+	display: flex;
+	flex-wrap: nowrap;         /* verhindert Zeilenumbruch */
+	align-items: center;
+	overflow: hidden;          /* optional: verhindert Überlauf */
+}
+
+.weather-orbs img {
+	flex-shrink: 1;            /* erlaubt Verkleinerung */
+	width: auto;
+	height: 1.5rem;              /* oder: height: auto; wenn du skalieren willst */
+	max-width: 100%;
+	margin-right: 0.5rem;
+}
+

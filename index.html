@@ -1,0 +1,495 @@
+<!doctype html>
+<html lang="de" class="h-100" data-bs-theme="auto">
+  <head>
+  
+<!---------------------------------------------------------------------------------------------------------
+	Meta Stuffs
+---------------------------------------------------------------------------------------------------------->
+  
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title id="pageTitle">Paper Mario Startpage by ADarkHero</title>
+
+<!---------------------------------------------------------------------------------------------------------
+	CSS
+---------------------------------------------------------------------------------------------------------->
+	
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/cover.css" rel="stylesheet" />
+	<link href="css/mario.css" rel="stylesheet" />
+  </head>
+  <body class="d-flex h-100 text-center">
+    <div class="d-flex w-100 h-100 p-3 mx-auto flex-column">	  
+      <main class="px-2 background-1 no-padding">
+		<div class="container-fluid no-padding">
+			<div class="row no-padding no-margin">
+			
+<!---------------------------------------------------------------------------------------------------------
+	Header thingy
+---------------------------------------------------------------------------------------------------------->
+	
+			
+				<div class="col-md-4">
+					<div class="row">
+						<div class="col-md-12 text-start mt-1 background-paper">
+								<h1 id="title">ADarkHero</h1>
+								<h5 id="subtitle">Little Dashboard uwu</h1>
+						</div>
+					</div>
+					
+<!---------------------------------------------------------------------------------------------------------
+	Clock / Uhr / RTC / Real time clock
+---------------------------------------------------------------------------------------------------------->
+					
+					<div class="row mt-3 d-flex align-items-center">
+						<div class="col-md-8 background-paper">
+							<div class="row d-flex align-items-center">
+								<div class="col-md-4">
+									<img src="img/menu/stats/clock.png" />
+								</div>
+								<div class="col-md-8 text-center">
+									<span id="clock">--.--.-- --:--:--</span>
+								</div>
+							</div>
+						</div>
+						
+<!---------------------------------------------------------------------------------------------------------
+	Links / Speech bubbles
+---------------------------------------------------------------------------------------------------------->
+						
+						<div class="col-md-3 speech-bubble">
+							
+							<div class="speech-bubble-wrapper">
+								<a href="" target="_blank" id="speech-bubble1">
+								  <img src="img/menu/speech_bubble_right.png" class="d-block">
+								  <img id="speech-bubble-img1" src="img/menu/shine.png" class="speech-bubble-overlay speech-bubble-overlay-right no-filter">
+								</a>
+							</div>
+
+						</div>
+						<div class="col-md-1">
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-3">
+							<div class="text-start speech-bubble">
+								<div class="speech-bubble-wrapper">
+									<a href="" target="_blank" id="speech-bubble2">
+									  <img src="img/menu/speech_bubble_left.png" class="d-block">
+									  <img id="speech-bubble-img2" src="img/menu/shine.png" class="speech-bubble-overlay speech-bubble-overlay-left no-filter">
+									</a>
+								</div>
+							</div>
+							<div class="text-end speech-bubble">
+								<div class="speech-bubble-wrapper">
+									<a href="" target="_blank" id="speech-bubble3">
+									  <img src="img/menu/speech_bubble_left.png" class="d-block">
+									  <img id="speech-bubble-img3" src="img/menu/shine.png" class="speech-bubble-overlay speech-bubble-overlay-left no-filter">
+									</a>
+								</div>
+							</div>
+							<div class="text-start speech-bubble">
+								<div class="speech-bubble-wrapper">
+									<a href="" target="_blank" id="speech-bubble4">
+									  <img src="img/menu/speech_bubble_left.png" class="d-block">
+									  <img id="speech-bubble-img4" src="img/menu/shine.png" class="speech-bubble-overlay speech-bubble-overlay-left no-filter">
+									</a>
+								</div>
+							</div>
+						</div>
+						
+<!---------------------------------------------------------------------------------------------------------
+	Animated main picture
+---------------------------------------------------------------------------------------------------------->
+						
+						<div class="col-md-6">
+							<img src='img/mario/vivian.png' onmouseover="this.src='img/mario/vivian_anim.png';" onmouseout="this.src='img/mario/vivian.png';" />
+							<br /><br />
+							
+<!---------------------------------------------------------------------------------------------------------
+	Link switcher 
+---------------------------------------------------------------------------------------------------------->
+							
+							<div class="background-paper pt-1 pb-1">
+								<a href="#" onclick="addBookmarks(1);" class="a-active" id="bookmark-page1">1</a>&nbsp;&nbsp;
+								<a href="#" onclick="addBookmarks(2);" id="bookmark-page2">2</a>&nbsp;&nbsp;
+								<a href="#" onclick="addBookmarks(3);" id="bookmark-page3">3</a>
+							</div>
+						</div>
+						
+<!---------------------------------------------------------------------------------------------------------
+	Links / Speech bubbles (Part 2)
+---------------------------------------------------------------------------------------------------------->						
+						
+						<div class="col-md-3">
+							<div class="text-start speech-bubble">
+								<div class="speech-bubble-wrapper">
+									<a href="" target="_blank" id="speech-bubble5">
+									  <img src="img/menu/speech_bubble_right.png" class="d-block">
+									  <img id="speech-bubble-img5" src="img/menu/shine.png" class="speech-bubble-overlay speech-bubble-overlay-right no-filter">
+									</a>
+								</div>
+							</div>
+							<div class="text-end speech-bubble">
+								<div class="speech-bubble-wrapper">
+									<a href="" target="_blank" id="speech-bubble6">
+									  <img src="img/menu/speech_bubble_right.png" class="d-block">
+									  <img id="speech-bubble-img6" src="img/menu/shine.png" class="speech-bubble-overlay speech-bubble-overlay-right no-filter">
+									</a>
+								</div>
+							</div>
+							<div class="text-start speech-bubble">
+								<div class="speech-bubble-wrapper">
+									<a href="" target="_blank" id="speech-bubble7">
+									  <img src="img/menu/speech_bubble_right.png" class="d-block">
+									  <img id="speech-bubble-img7" src="img/menu/shine.png" class="speech-bubble-overlay speech-bubble-overlay-right no-filter">
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="background-paper mt-3 mb-1">
+						<div class="row d-flex align-items-center pt-1 pb-1 mt-2">
+							<div class="col-md-5 text-start">
+								HP
+							</div>
+							<div class="col-md-2">
+								<img src="img/menu/stats/coin.png" /> 
+							</div>
+							
+							<div class="col-md-5 text-end pr-1rem">
+								Coins Value
+							</div>
+						</div>
+							
+						<div class="row d-flex align-items-center pt-1 pb-1 mt-2">
+							<div class="col-md-5 text-start">
+								FP
+							</div>
+							<div class="col-md-2">
+								<img src="img/menu/stats/coin.png" /> 
+							</div>
+							<div class="col-md-5 text-end pr-1rem">
+								Coins Value
+							</div>
+						</div>
+							
+						<div class="row d-flex align-items-center pt-1 pb-1 mt-2">
+							<div class="col-md-5 text-start">
+								BP
+							</div>
+							<div class="col-md-2">
+								<img src="img/menu/stats/coin.png" /> 
+							</div>
+							<div class="col-md-5 text-end pr-1rem">
+								Coins Value
+							</div>
+						</div>
+					</div>
+					
+					<div class="background-paper mt-3 mb-1">
+						<div class="row d-flex align-items-center pt-1 pb-1">
+							<div class="col-md-2">
+								<img src="img/menu/settings.png" /> 
+							</div>
+							<div class="col-md-10 text-start">
+								<a href="#" data-bs-toggle="modal" data-bs-target="#fullscreenFormModal">
+									Einstellungen...
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+<!---------------------------------------------------------------------------------------------------------
+	Weather / Wetter
+---------------------------------------------------------------------------------------------------------->
+	
+				<div class="col-md-4">
+					<div class="mx-auto background-paper mt-1 weather">
+						<div class="row d-flex align-items-center h-25 no-margin" id="weatherToday">
+							<div class="col-md-2">
+								<div id="weatherIcon">
+									<img src="img/menu/weather/fire_flower.png" />
+								</div>
+							</div>
+							<div class="col-md-10 text-start">
+								<div class="weather-orbs" id="weatherOrbs">
+
+								</div>
+								<div class="mt-2">
+									<span class="text-start" id="weatherTodayStr">Wolkig mit Aussicht auf Fleischbällchen.</span>
+								</div>
+							</div>
+						</div>
+						<div class="row d-flex align-items-center pt-1 pb-1">
+							<div class="col-md-2">
+								<img src="img/menu/stats/crystal_star.png" />
+							</div>
+							<div class="col-md-2 pt-1 pb-1" id="weatherForecast1">
+								<span id="weatherForecastStr1">Rate limit...</span>
+							</div>
+							<div class="col-md-2 pt-1 pb-1" id="weatherForecast2">
+								<span id="weatherForecastStr2">Rate limit...</span>
+							</div>
+							<div class="col-md-2 pt-1 pb-1"  id="weatherForecast3">
+								<span id="weatherForecastStr3">Rate limit...</span>
+							</div>
+							<div class="col-md-2 pt-1 pb-1"  id="weatherForecast4">
+								<span id="weatherForecastStr4">Rate limit...</span>
+							</div>
+							<div class="col-md-2 pt-1 pb-1"  id="weatherForecast5">
+								<span id="weatherForecastStr5">Rate limit...</span>
+							</div>
+						</div>
+					</div>
+					<div class="mx-auto background-paper mt-3">
+						<div class="row d-flex align-items-center pt-1 pb-1">
+							<div class="col-md-2">
+								<img src="img/menu/stats/star_point.png" />
+							</div>
+							<div class="col-md-4 text-start">
+								Star Point
+							</div>
+							<div class="col-md-6 text-end pr-1rem">
+								uwu
+							</div>
+						</div>
+						
+<!---------------------------------------------------------------------------------------------------------
+	Stonks / Stocks / Aktien
+---------------------------------------------------------------------------------------------------------->						
+						<div class="row d-flex align-items-center pt-1 pb-1 mt-2">
+							<div class="col-md-2">
+								<img src="img/menu/stats/coin.png" /> 
+							</div>
+							<div class="col-md-4 text-start">
+								A1JX52
+							</div>
+							<div class="col-md-6 text-end pr-1rem">
+								<span id="stockValue">Rate limit...</span>
+							</div>
+						</div>
+						
+						<div class="row d-flex align-items-center pt-1 pb-1 mt-2">
+							<div class="col-md-2">
+								<img src="img/menu/stats/star_piece.png" />
+							</div>
+							<div class="col-md-4 text-start">
+								Coins
+							</div>
+							<div class="col-md-6 text-end pr-1rem">
+								Coins Value
+							</div>
+						</div>
+						
+						<div class="row d-flex align-items-center pt-1 pb-1 mt-2">
+							<div class="col-md-2">
+								<img src="img/menu/stats/shine.png" />
+							</div>
+							<div class="col-md-4 text-start">
+								Coins
+							</div>
+							<div class="col-md-6 text-end pr-1rem">
+								Coins Value
+							</div>
+						</div>
+						
+						<div class="row d-flex align-items-center pt-1 pb-1 mt-2">
+							<div class="col-md-2">
+								<img src="img/menu/stats/clock.png" />
+							</div>
+							<div class="col-md-4 text-start">
+								Coins
+							</div>
+							<div class="col-md-6 text-end pr-1rem">
+								Coins Value
+							</div>
+						</div>
+					</div>
+				</div>
+				
+<!---------------------------------------------------------------------------------------------------------
+	ToDo Liste
+---------------------------------------------------------------------------------------------------------->
+				
+				<div class="col-md-4 background-2">
+					<div class="row">
+						<div class="col-md-12 mx-auto no-padding">
+					
+							<div class="row d-flex align-items-center background-paper mt-1 mb-3 pt-3 pb-3">
+								<div class="col-md-10">
+									<h2>ToDo List</h2>
+								</div>
+								
+								<div class="col-md-2">
+									<img src="img/menu/add.png" />
+								</div>
+								
+							</div>
+						
+							<div class="row d-flex align-items-center background-paper pt-1 pb-1" id="notesContainer">
+								<div class="col-md-2">
+									<img src="img/menu/map.png" />
+								</div>
+								
+								<div class="col-md-10 text-start" id="notesTxt">
+								</div>
+							</div>
+							
+							<div class="row d-flex align-items-center background-paper pt-1 pb-1 mt-1">
+								<div class="col-md-2">
+									<img src="img/menu/badges/bougyo_pura_3d.png" />
+								</div>
+								<div class="col-md-8 text-start">
+									Die ToDo List actually dynamisch gestalten. lul<br />
+									- Ueber LocalStorage speichern
+								</div>	
+								<div class="col-md-2 text-start">
+									<img src="img/menu/delete.png" />
+								</div>
+							</div>
+							
+							<div class="row d-flex align-items-center background-paper pt-1 pb-1 mt-1">
+								<div class="col-md-2">
+									<img src="img/menu/badges/bougyo_pura_3d.png" />
+								</div>
+								<div class="col-md-8 text-start">
+									Hover effect on images
+								</div>
+								<div class="col-md-2 text-start">
+									<img src="img/menu/delete.png" />
+								</div>
+							</div>
+							
+							<div class="row d-flex align-items-center background-paper pt-1 pb-1 mt-1">
+								<div class="col-md-2">
+									<img src="img/menu/badges/bougyo_pura_3d.png" />
+								</div>
+								<div class="col-md-8 text-start">
+									Budget via Sheets
+								</div>
+								<div class="col-md-2 text-start">
+									<img src="img/menu/delete.png" />
+								</div>
+							</div>
+								
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main> 
+
+<!---------------------------------------------------------------------------------------------------------
+	Search / Suche
+---------------------------------------------------------------------------------------------------------->
+		
+		<footer class="mt-auto background-paper">
+		  <div class="d-grid col-10 mx-auto pt-2 pb-2">
+			<nav class="navbar navbar-light">
+			  <form class="form-inline w-100" target="_blank" method="get" action="https://duckduckgo.com">
+				<input class="form-control hero-search" type="search" name="q" id="search" placeholder="Wonach suchst du im Leben...?" autofocus aria-label="Search">
+			  </form>
+			</nav>
+		</div>
+      </footer>
+		
+		</div>	
+    </div>
+
+<!---------------------------------------------------------------------------------------------------------
+	Settings
+---------------------------------------------------------------------------------------------------------->
+	<div class="modal fade" id="fullscreenFormModal" tabindex="-1" aria-labelledby="formModalLabel" aria-hidden="true">
+	  <div class="modal-dialog modal-fullscreen"> <!-- Vollbild -->
+		<div class="modal-content">
+		  <div class="modal-header">
+			<h5 class="modal-title" id="formModalLabel">Einstellungen</h5>
+			<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Schließen"></button>
+		  </div>
+		  <form id="settingsForm">
+			  <div class="modal-body">
+				<!-- Dein Formular -->
+					<div class="row">
+					  <div class="col-md-6 mb-3">
+						<label for="titleInput" class="form-label">Titel</label>
+						<input type="text" class="form-control" id="titleInput" placeholder="Titel der Webseite" data-bs-toggle="tooltip" title="Titel der Webseite">
+					  </div>
+					  <div class="col-md-6 mb-3">
+						<label for="subtitleInput" class="form-label">Untertitel</label>
+						<input type="text" class="form-control" id="subtitleInput" placeholder="Untertitel der Webseite" data-bs-toggle="tooltip" title="Untertitel der Webseite">
+					  </div>
+				  </div>
+				  <div class="row">
+					  <div class="col-md-6 mb-3">
+						<label for="latInput" class="form-label">Laengengrad / Wetter / lat</label>
+						<input type="text" class="form-control" id="latInput" placeholder="z.B. 69.69" data-bs-toggle="tooltip" title="z.B. 69.69">
+					  </div>
+					  <div class="col-md-6 mb-3">
+						<label for="lonInput" class="form-label">Breitengrad / Wetter / lon</label>
+						<input type="text" class="form-control" id="lonInput" placeholder="z.B.: 42.161" data-bs-toggle="tooltip" title="z.B.: 42.161">
+					  </div>
+				  </div>
+				  <div class="row">
+					  <div class="col-md-6 mb-3">
+						<label for="alphavantageInput" class="form-label">Alphavantage API-Key / fuer Aktienanbindung</label>
+						<input type="text" class="form-control" id="alphavantageInput" placeholder="z.B. T69XQUAZERUWU69I" data-bs-toggle="tooltip" title="z.B. T69XQUAZERUWU69I">
+					  </div>
+					  <div class="col-md-6 mb-3">
+						<label for="stockInput" class="form-label">Aktie</label>
+						<input type="text" class="form-control" id="stockInput" placeholder="US-Symbol z.B. VGWL.DE" data-bs-toggle="tooltip" title="US-Symbol z.B. VGWL.DE">
+					  </div>
+				  </div>
+				  <div class="row">
+					  <div class="col-md-12 mb-3">
+						<label for="textfileInput" class="form-label">Textdatei Dateipfad / fuer externe Notizen</label>
+						<input type="text" class="form-control" id="textfileInput" placeholder="z.B. txt/notes.txt oder https://www.example.com/txt/notes.txt"  data-bs-toggle="tooltip" title="z.B. txt/notes.txt oder https://www.example.com/txt/notes.txt">
+					  </div>
+				  </div>
+				  <div class="row">
+					  <div class="col-md-6 mb-3">
+						<label for="bookmarkInput" class="form-label">Linkliste / Bookmarks</label>
+						<textarea class="form-control" id="bookmarkInput" rows="3" data-bs-toggle="tooltip" title="1 Link pro Zeile, maximal 21 Links"></textarea>
+					  </div>
+					  <div class="col-md-6 mb-3">
+						<label for="bookmarkimgInput" class="form-label">Bilderliste fuer Linkliste</label>
+						<textarea class="form-control" id="bookmarkimgInput" rows="3" data-bs-toggle="tooltip" title="1 Bild pro Zeile, maximal 21 Links / bestenfalls 64x64px, wird ansonsten automatisch verkleinert"></textarea>
+					  </div>
+				  </div>
+			  </div>
+			  <div class="modal-footer">
+				<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Schliessen</button>
+				<button type="submit" class="btn btn-primary">Absenden</button>
+			  </div>
+		  </form>
+		</div>
+	  </div>
+	</div>
+
+		
+    <script
+      src="js/bootstrap.bundle.min.js"
+      class="astro-vvvwv3sm"
+    ></script>
+
+<!---------------------------------------------------------------------------------------------------------
+	JavaScript files
+---------------------------------------------------------------------------------------------------------->
+	
+	<script src="js/weather.js"></script>
+	<script src="js/clock.js"></script>
+	<script src="js/search.js"></script>
+	<script src="js/stocks.js"></script>
+	<script src="js/readtxt.js"></script> 
+	<script src="js/bookmark.js"></script> 
+	<script src="js/settings.js"></script> 
+	<script src="js/title.js"></script>
+	
+	<script>
+		const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
+		tooltipTriggerList.forEach(el => new bootstrap.Tooltip(el));
+	</script>
+  </body>
+</html>
