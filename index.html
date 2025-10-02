@@ -104,7 +104,7 @@
 ---------------------------------------------------------------------------------------------------------->
 						
 						<div class="col-md-6">
-							<img src='img/mario/vivian.png' onmouseover="this.src='img/mario/vivian_anim.png';" onmouseout="this.src='img/mario/vivian.png';" />
+							<img src='img/mario/vivian.png' onmouseover="this.src='img/mario/vivian_anim.png';" onmouseout="this.src='img/mario/vivian.png';" class="no-max-height" />
 							<br /><br />
 							
 <!---------------------------------------------------------------------------------------------------------
@@ -112,9 +112,9 @@
 ---------------------------------------------------------------------------------------------------------->
 							
 							<div class="background-paper pt-1 pb-1">
-								<a href="#" onclick="addBookmarks(1);" class="a-active" id="bookmark-page1">1</a>&nbsp;&nbsp;
-								<a href="#" onclick="addBookmarks(2);" id="bookmark-page2">2</a>&nbsp;&nbsp;
-								<a href="#" onclick="addBookmarks(3);" id="bookmark-page3">3</a>
+								<a href="#" onclick="showBookmarks(1);" class="a-active" id="bookmark-page1">1</a>&nbsp;&nbsp;
+								<a href="#" onclick="showBookmarks(2);" id="bookmark-page2">2</a>&nbsp;&nbsp;
+								<a href="#" onclick="showBookmarks(3);" id="bookmark-page3">3</a>
 							</div>
 						</div>
 						
@@ -265,10 +265,10 @@
 								<img src="img/menu/stats/coin.png" /> 
 							</div>
 							<div class="col-md-4 text-start">
-								A1JX52
+								<span id="stockName">A1JX52</span>
 							</div>
 							<div class="col-md-6 text-end pr-1rem">
-								<span id="stockValue">Rate limit...</span>
+								<span id="stockValue">No data available...</span>
 							</div>
 						</div>
 						
@@ -374,6 +374,93 @@
 									<img src="img/menu/delete.png" />
 								</div>
 							</div>
+							
+							<div class="row d-flex align-items-center background-paper pt-1 pb-1 mt-1">
+								<div class="col-md-2">
+									<img src="img/menu/badges/bougyo_pura_3d.png" />
+								</div>
+								<div class="col-md-8 text-start">
+									Error Handling lul
+								</div>
+								<div class="col-md-2 text-start">
+									<img src="img/menu/delete.png" />
+								</div>
+							</div>
+							
+							<div class="row d-flex align-items-center background-paper pt-1 pb-1 mt-1">
+								<div class="col-md-2">
+									<img src="img/menu/badges/bougyo_pura_3d.png" />
+								</div>
+								<div class="col-md-8 text-start">
+									Standardwerte
+								</div>
+								<div class="col-md-2 text-start">
+									<img src="img/menu/delete.png" />
+								</div>
+							</div>
+							
+							<div class="row d-flex align-items-center background-paper pt-1 pb-1 mt-1">
+								<div class="col-md-2">
+									<img src="img/menu/badges/bougyo_pura_3d.png" />
+								</div>
+								<div class="col-md-8 text-start">
+									Mobile design
+								</div>
+								<div class="col-md-2 text-start">
+									<img src="img/menu/delete.png" />
+								</div>
+							</div>
+							
+							<div class="row d-flex align-items-center background-paper pt-1 pb-1 mt-1">
+								<div class="col-md-2">
+									<img src="img/menu/badges/bougyo_pura_3d.png" />
+								</div>
+								<div class="col-md-8 text-start">
+									Different "main" characters
+								</div>
+								<div class="col-md-2 text-start">
+									<img src="img/menu/delete.png" />
+								</div>
+							</div>
+							
+							<div class="row d-flex align-items-center background-paper pt-1 pb-1 mt-1">
+								<div class="col-md-2">
+									<img src="img/menu/badges/bougyo_pura_3d.png" />
+								</div>
+								<div class="col-md-8 text-start">
+									Bookmarks in 1080p vewwy smol
+								</div>
+								<div class="col-md-2 text-start">
+									<img src="img/menu/delete.png" />
+								</div>
+							</div>
+							
+							<div class="row d-flex align-items-center background-paper pt-1 pb-1 mt-1">
+								<div class="col-md-2">
+									<img src="img/menu/badges/bougyo_pura_3d.png" />
+								</div>
+								<div class="col-md-8 text-start">
+									Reload once an hour.
+								</div>
+								<div class="col-md-2 text-start">
+									<img src="img/menu/delete.png" />
+								</div>
+							</div>
+							
+							<div class="row d-flex align-items-center background-paper pt-1 pb-1 mt-1">
+								<div class="col-md-2">
+									<img src="img/menu/badges/bougyo_pura_3d.png" />
+								</div>
+								<div class="col-md-8 text-start">
+									Settings export/import.
+								</div>
+								<div class="col-md-2 text-start">
+									<img src="img/menu/delete.png" />
+								</div>
+							</div>
+							
+							
+							<div class="mb-1"></div>
 								
 							</div>
 						</div>
@@ -404,7 +491,7 @@
 ---------------------------------------------------------------------------------------------------------->
 	<div class="modal fade" id="fullscreenFormModal" tabindex="-1" aria-labelledby="formModalLabel" aria-hidden="true">
 	  <div class="modal-dialog modal-fullscreen"> <!-- Vollbild -->
-		<div class="modal-content">
+		<div class="modal-content background-paper">
 		  <div class="modal-header">
 			<h5 class="modal-title" id="formModalLabel">Einstellungen</h5>
 			<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Schließen"></button>

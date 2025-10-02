@@ -61,5 +61,8 @@ var stockStr = "";
 			stockStr = stockStr + "</small>";
 			const el = document.getElementById("stockValue");
 			if (el) el.innerHTML  = stockStr;
+			
+			const el = document.getElementById("stockName");
+			if (el) el.innerHTML  = localStorage.getItem("stock");
 		  })
 		  .catch(err => console.error("Fehler beim Abrufen:", err));

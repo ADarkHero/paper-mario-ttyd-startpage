@@ -1,7 +1,7 @@
 fetch(localStorage.getItem("textfile"))
   .then(res => res.text())
   .then(text => {
-	if (text.trim().length === 0) {
+	if (text.trim().length === 0 || text.trim() === "null") {
 		console.log("Die notes.txt Datei ist leer...");
 		document.getElementById("notesContainer").classList.add("hidden-force");
 	} else {
