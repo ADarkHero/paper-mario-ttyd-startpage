@@ -465,11 +465,18 @@
 					  </div>
 				  </div>
 			  </div>
-			  <div class="modal-footer">
-				<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+			  <div class="modal-footer  background-paper">
+				<button type="button" class="btn btn-info" onclick="exportJson()">Export Settings</button>
+				<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close without saving</button>
 				<button type="submit" class="btn btn-primary">Submit</button>
 			  </div>
 		  </form>
+			
+			<div class="mb-3 background-paper mt-3 pt-3">
+			  <label for="jsonFileInput" class="form-label">Import settings file</label>
+			  <input class="form-control" type="file" id="jsonFileInput" accept=".json">
+			  <button onclick="importJson()" class="btn btn-primary mt-1" >Import Settings file</button>
+			</div>
 		</div>
 	  </div>
 	</div>
@@ -492,7 +499,7 @@
 	<script src="js/readtxt.js"></script> 
 	<script src="js/title.js"></script>
 	<script src="js/budget.js"></script>
-	<script src="js/psutil.js"></script> 
+	<script src="js/psutil.js"></script>
 	<script src="js/todo.js"></script> 
 	<script src="js/settings.js"></script> 
 
@@ -508,40 +515,6 @@
 		location.reload();
 	  }, 3600000);
 	</script>
-
-	<script>
-		function exportJson(){
-			//Json export string
-			const exportObj = {};
-
-			for (let i = 0; i < localStorage.length; i++) {
-			  const key = localStorage.key(i);
-			  exportObj[key] = localStorage.getItem(key);
-			}
-
-			const json = JSON.stringify(exportObj, null, 2);
-			console.log(json);
-		}
-		function importJson(){
-			try {
-			  const data = JSON.parse(jsonString);
-
-			  for (const key in data) {
-				if (data.hasOwnProperty(key)) {
-				  localStorage.setItem(key, data[key]);
-				}
-			  }
-
-			  console.log("Import erfolgreich!");
-			} catch (e) {
-			  console.error("Ungültiges JSON:", e);
-			}
-		}
-	</script>
-
-  <script>
-	
-  </script>
 
   </body>
 </html>

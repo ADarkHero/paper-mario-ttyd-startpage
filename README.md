@@ -14,3 +14,4 @@ The project uses simple html, javascript & css (+bootstrap).It can run locally o
  - 💰 Reads your current budget from Google Sheets
  - 💻 Shows the current disc usage of a remote pc/server (via psutil_api / python)
  - ⚙️ Change different settings and save them locally in your browsers local storage
+ - ⚙️ Export/Import settings as json

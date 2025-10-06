@@ -1,3 +1,74 @@
+function exportJson(){
+	//Json export string
+	const exportObj = {};
+
+	for (let i = 0; i < localStorage.length; i++) {
+	  const key = localStorage.key(i);
+	  exportObj[key] = localStorage.getItem(key);
+	}
+
+	const json = JSON.stringify(exportObj, null, 2);
+	console.log(json);
+	
+	const blob = new Blob([json], { type: "application/json" });
+	const url = URL.createObjectURL(blob);
+
+	const a = document.createElement("a");
+	a.href = url;
+	a.download = "pmttyd-settings.json";
+	document.body.appendChild(a);
+	a.click();
+	document.body.removeChild(a);
+	URL.revokeObjectURL(url); // Speicher freigeben
+}
+
+
+
+function importJson() {
+	  event.preventDefault(); // Disable standard interaction
+
+  const fileInput = document.getElementById("jsonFileInput");
+  const file = fileInput.files[0];
+
+  if (!file) {
+	console.error("No file selected!");
+	alert("No file selected!");
+	return;
+  }
+
+  const reader = new FileReader();
+
+  reader.onload = function(event) {
+	try {
+	  const jsonString = event.target.result;
+	  const data = JSON.parse(jsonString);
+
+	  for (const key in data) {
+		if (data.hasOwnProperty(key)) {
+		  localStorage.setItem(key, data[key]);
+		}
+	  }
+
+	  console.log("✅ Import successful!");
+
+		// Display feedback
+	  alert("Thank you very much! Your data has been saved. The page will now be reloaded!");
+	  location.reload();
+	} catch (e) {
+	  console.error("❌ Invalid JSON: ", e);
+	  alert("❌ Invalid settings file.");
+	}
+  };
+
+  reader.onerror = function() {
+	console.error("Error reading the settings file.");
+  };
+
+  reader.readAsText(file);
+}
+
+
+
 document.getElementById('fullscreenFormModal').addEventListener('shown.bs.modal', function () {
   console.log("Formular was opened.");
   
@@ -19,6 +90,8 @@ document.getElementById('fullscreenFormModal').addEventListener('shown.bs.modal'
   document.getElementById("psutilDisk3Input").value = localStorage.getItem("psutilDisk3");
 
 });
+
+
 
 document.getElementById("settingsForm").addEventListener("submit", function (event) {
   event.preventDefault(); // Disable standard interaction
