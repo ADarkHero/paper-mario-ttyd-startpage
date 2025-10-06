@@ -4,7 +4,7 @@ function addToToDo() {
 	if (todo !== null) {
 		console.log("Input of ToDo: " + todo);
 		todosLocal = localStorage.getItem("todo");
-		if (todo !== null && todo !== "") {
+		if (todo !== null && todo !== "" && todo !== "null") {
 			todoStore = todosLocal + "$$$" + todo;
 		}
 		else{
@@ -167,8 +167,8 @@ const todos = localStorage.getItem("todo").split("$$$");
 for (let i = 0; i < todos.length; i++) {
   console.log("ToDo #" + (i + 1) + ": " + todos[i]);
   
-  //If the todo is not null, add it to the end of the todo container
-  if (todos[i] !== null && todos[i] !== "null") {
+  //If the todo is not null/empty, add it to the end of the todo container
+  if (todos[i] !== "null" && todos[i]) {
 	  addToDoToHTML(todos[i], i);	
 	}
   console.log(todos[i]);
