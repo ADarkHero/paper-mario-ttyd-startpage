@@ -25,7 +25,7 @@ function exportJson(){
 
 
 function importJson() {
-	  event.preventDefault(); // Disable standard interaction
+	event.preventDefault(); // Disable standard interaction
 
   const fileInput = document.getElementById("jsonFileInput");
   const file = fileInput.files[0];
