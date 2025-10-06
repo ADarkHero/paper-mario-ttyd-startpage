@@ -4,9 +4,14 @@ function addToToDo() {
 	if (todo !== null) {
 		console.log("Input of ToDo: " + todo);
 		todosLocal = localStorage.getItem("todo");
-		todoStore = todosLocal + "$$$" + todo;
+		if (todo !== null && todo !== "") {
+			todoStore = todosLocal + "$$$" + todo;
+		}
+		else{
+			todoStore = todo;
+		}
 		
-		//Get id
+		//Get id, because we need it to add it to html
 		const todosSplit = todosLocal.split("$$$");
 		
 		addToDoToHTML(todo, todosSplit.length);

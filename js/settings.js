@@ -12,6 +12,11 @@ document.getElementById('fullscreenFormModal').addEventListener('shown.bs.modal'
   document.getElementById("bookmarkInput").value = localStorage.getItem("bookmark");
   document.getElementById("bookmarkimgInput").value = localStorage.getItem("bookmarkimg");
   document.getElementById("budgetInput").value = localStorage.getItem("budget");
+  document.getElementById("todoInput").value = localStorage.getItem("todo");
+  document.getElementById("psutilInputInput").value = localStorage.getItem("psutil");
+  document.getElementById("psutilDisk1Input").value = localStorage.getItem("psutilDisk1");
+  document.getElementById("psutilDisk2Input").value = localStorage.getItem("psutilDisk2");
+  document.getElementById("psutilDisk3Input").value = localStorage.getItem("psutilDisk3");
 
 });
 
@@ -31,6 +36,11 @@ document.getElementById("settingsForm").addEventListener("submit", function (eve
   localStorage.setItem("bookmark", document.getElementById("bookmarkInput").value);
   localStorage.setItem("bookmarkimg", document.getElementById("bookmarkimgInput").value);
   localStorage.setItem("budget", document.getElementById("budgetInput").value);
+  localStorage.setItem("todo", document.getElementById("todoInput").value);
+  localStorage.setItem("psutil", document.getElementById("psutilInput").value);
+  localStorage.setItem("psutilDisk1", document.getElementById("psutilDisk1Input").value);
+  localStorage.setItem("psutilDisk2", document.getElementById("psutilDisk2Input").value);
+  localStorage.setItem("psutilDisk3", document.getElementById("psutilDisk3Input").value);
 
   // Close form
   const modal = bootstrap.Modal.getInstance(document.getElementById("fullscreenFormModal"));

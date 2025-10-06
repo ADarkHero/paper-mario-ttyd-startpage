@@ -149,41 +149,46 @@
 							</div>
 						</div>
 					</div>
+					
+<!---------------------------------------------------------------------------------------------------------
+	Disk usage / Festplattenauslastung
+---------------------------------------------------------------------------------------------------------->
+					
 					<div class="background-paper mt-3 mb-1">
 						<div class="row d-flex align-items-center pt-1 pb-1 mt-2">
 							<div class="col-md-5 text-start">
-								HP
+								<span id="volume1_name">/volume1</span>
 							</div>
 							<div class="col-md-2">
-								<img src="img/menu/stats/coin.png" /> 
+								<img src="img/menu/stats/hp.png" /> 
 							</div>
 							
 							<div class="col-md-5 text-end pr-1rem">
-								Coins Value
+								<span id="volume1">X / X TB</span>
 							</div>
 						</div>
 							
 						<div class="row d-flex align-items-center pt-1 pb-1 mt-2">
 							<div class="col-md-5 text-start">
-								FP
+								<span id="volume2_name">/volume2</span>
 							</div>
 							<div class="col-md-2">
-								<img src="img/menu/stats/coin.png" /> 
+								<img src="img/menu/stats/fp.png" /> 
 							</div>
 							<div class="col-md-5 text-end pr-1rem">
-								Coins Value
+								<span id="volume2">X / X TB</span>
 							</div>
 						</div>
 							
 						<div class="row d-flex align-items-center pt-1 pb-1 mt-2">
 							<div class="col-md-5 text-start">
-								BP
+								<span id="volume3_name">/volume3</span>
 							</div>
 							<div class="col-md-2">
-								<img src="img/menu/stats/coin.png" /> 
+								<img src="img/menu/stats/bp.png" /> 
 							</div>
 							<div class="col-md-5 text-end pr-1rem">
-								Coins Value
+								<span id="volume3">X / X TB</span>
 							</div>
 						</div>
 					</div>
@@ -433,6 +438,32 @@
 						<textarea class="form-control" id="bookmarkimgInput" rows="3" data-bs-toggle="tooltip" title="1 Bild pro Zeile, maximal 21 Links / bestenfalls 64x64px, wird ansonsten automatisch verkleinert / Die Reihenfolge muss mit der Linkliste übereinstimmen"></textarea>
 					  </div>
 				  </div>
+				  <div class="row">
+					  <div class="col-md-12 mb-3">
+						<label for="psutilInput" class="form-label">Psutil API URL</label>
+						<input type="text" class="form-control" id="psutilInput" placeholder="z.B. https://psutilapi.server.cat/api/system"  data-bs-toggle="tooltip" title="z.B. https://psutilapi.server.cat/api/system">
+					  </div>
+				  </div>
+				  <div class="row">
+					  <div class="col-md-4 mb-3">
+						<label for="psutilDisk1Input" class="form-label">Psutil API  - Erste Platte</label>
+						<input type="text" class="form-control" id="psutilDisk1Input" placeholder="z.B. /volume1"  data-bs-toggle="tooltip" title="z.B. /volume1">
+					  </div>
+					  <div class="col-md-4 mb-3">
+						<label for="psutilDisk2Input" class="form-label">Psutil API  - Erste Platte</label>
+						<input type="text" class="form-control" id="psutilDisk2Input" placeholder="z.B. /volume2"  data-bs-toggle="tooltip" title="z.B. /volume2">
+					  </div>
+					  <div class="col-md-4 mb-3">
+						<label for="psutilDisk3Input" class="form-label">Psutil API  - Erste Platte</label>
+						<input type="text" class="form-control" id="psutilDisk3Input" placeholder="z.B. /volume3"  data-bs-toggle="tooltip" title="z.B. /volume3">
+					  </div>
+				  </div>
+				  <div class="row">
+					  <div class="col-md-12 mb-3">
+						<label for="todoInput" class="form-label">ToDo list</label>
+						<textarea class="form-control" id="todoInput" rows="3" data-bs-toggle="tooltip" title="$$$ teilt unterschiedliche ToDos"></textarea>
+					  </div>
+				  </div>
 			  </div>
 			  <div class="modal-footer">
 				<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Schliessen</button>
@@ -452,7 +483,7 @@
 <!---------------------------------------------------------------------------------------------------------
 	JavaScript files
 ---------------------------------------------------------------------------------------------------------->
-<!--
+
 	<script src="js/weather.js"></script>
 	<script src="js/clock.js"></script>
 	<script src="js/search.js"></script>
@@ -460,7 +491,8 @@
 	<script src="js/readtxt.js"></script> 
 	<script src="js/bookmark.js"></script> 
 	<script src="js/title.js"></script>
-	<script src="js/budget.js"></script> -->
+	<script src="js/budget.js"></script>
+	<script src="js/psutil.js"></script> 
 	<script src="js/todo.js"></script> 
 	<script src="js/settings.js"></script> 
 
@@ -477,6 +509,39 @@
 	  }, 3600000);
 	</script>
 
+	<script>
+		function exportJson(){
+			//Json export string
+			const exportObj = {};
+
+			for (let i = 0; i < localStorage.length; i++) {
+			  const key = localStorage.key(i);
+			  exportObj[key] = localStorage.getItem(key);
+			}
+
+			const json = JSON.stringify(exportObj, null, 2);
+			console.log(json);
+		}
+		function importJson(){
+			try {
+			  const data = JSON.parse(jsonString);
+
+			  for (const key in data) {
+				if (data.hasOwnProperty(key)) {
+				  localStorage.setItem(key, data[key]);
+				}
+			  }
+
+			  console.log("Import erfolgreich!");
+			} catch (e) {
+			  console.error("Ungültiges JSON:", e);
+			}
+		}
+	</script>
+
+  <script>
+	
+  </script>
 
   </body>
 </html>
