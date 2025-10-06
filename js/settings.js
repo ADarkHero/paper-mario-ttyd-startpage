@@ -13,7 +13,7 @@ document.getElementById('fullscreenFormModal').addEventListener('shown.bs.modal'
   document.getElementById("bookmarkimgInput").value = localStorage.getItem("bookmarkimg");
   document.getElementById("budgetInput").value = localStorage.getItem("budget");
   document.getElementById("todoInput").value = localStorage.getItem("todo");
-  document.getElementById("psutilInputInput").value = localStorage.getItem("psutil");
+  document.getElementById("psutilInput").value = localStorage.getItem("psutil");
   document.getElementById("psutilDisk1Input").value = localStorage.getItem("psutilDisk1");
   document.getElementById("psutilDisk2Input").value = localStorage.getItem("psutilDisk2");
   document.getElementById("psutilDisk3Input").value = localStorage.getItem("psutilDisk3");

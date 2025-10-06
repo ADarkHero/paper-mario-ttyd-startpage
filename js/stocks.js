@@ -62,7 +62,7 @@ var stockStr = "";
 			const el = document.getElementById("stockValue");
 			if (el) el.innerHTML  = stockStr;
 			
-			const el = document.getElementById("stockName");
-			if (el) el.innerHTML  = localStorage.getItem("stock");
+			const el1 = document.getElementById("stockName");
+			if (el1) el1.innerHTML  = localStorage.getItem("stock");
 		  })
 		  .catch(err => console.error("Error getting stocks: ", err));
