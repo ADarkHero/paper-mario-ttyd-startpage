@@ -1,11 +1,9 @@
 document.addEventListener('keydown', () => {
   const search = document.getElementById('search');
+  const modal = document.querySelector('.modal.show'); // Bootstrap shows modals with .show
 
-  //Check if element exists
-  if (search) {
-	//Add cursor to text field
-	if (typeof search.focus === 'function') {
-	  search.focus();
-	}
+  // Only if modal is not shows
+  if (!modal && search && typeof search.focus === 'function') {
+    search.focus();
   }
 });
