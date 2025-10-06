@@ -1,5 +1,5 @@
 function addToToDo() {
-	let todo = prompt("Was soll der ToDo Liste hinzugefügt werden?");
+	let todo = prompt("What should be added to the ToDo list?");
 	
 	if (todo !== null) {
 		console.log("Input of ToDo: " + todo);

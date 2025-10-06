@@ -32,7 +32,7 @@ async function getWeather() {
         dailyStats[date].max = Math.max(dailyStats[date].max, temp);
       }
 
-      // Nur Icons zählen, die NICHT "night" enthalten
+      // Only icons that do NOT contain "night" count
       if (!icon.includes("night")) {
         dailyStats[date].iconCounts[icon] = (dailyStats[date].iconCounts[icon] || 0) + 1;
       }
@@ -40,7 +40,6 @@ async function getWeather() {
 
 	let forecastIndex = 1;
 
-    // Ausgabe
     Object.entries(dailyStats).forEach(([date, stats]) => {
       // Get most frequent icon for background
       const mostFrequentIcon = Object.entries(stats.iconCounts)

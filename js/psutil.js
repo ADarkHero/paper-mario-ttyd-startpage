@@ -6,7 +6,7 @@ function getVolumeData(volume, div, data){
 	  const totalGB = vol.total_GB;
 	  const usedGB = vol.used_GB;
 
-	  console.log(`📂 /vol: ${usedGB} GB von ${totalGB} GB verwendet (${percentUsed}%)`);
+	  console.log(`📂 /vol: ${usedGB} GB of ${totalGB} GB used (${percentUsed}%)`);
 	  // HTML output
 	  document.getElementById(div).innerHTML =
 		`${usedGB} GB<br>${totalGB} GB<br><small>${percentUsed}%</small>`;
@@ -14,7 +14,7 @@ function getVolumeData(volume, div, data){
 		//Write volume name to html
 		document.getElementById(div + "_name").innerHTML = volume;
 	} else {
-	  console.warn("Mountpoint " + volume + " nicht gefunden.");
+	  console.warn("Mountpoint " + volume + " not found.");
 	}
 }
   
@@ -26,5 +26,5 @@ fetch(localStorage.getItem("psutil"))
 	getVolumeData(localStorage.getItem("psutilDisk3"), "volume3", data);
   })
   .catch(error => {
-	console.error("Fehler beim Abrufen der Daten:", error);
+	console.error("Error requiering data: ", error);
   });

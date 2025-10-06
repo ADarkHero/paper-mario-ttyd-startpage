@@ -16,7 +16,7 @@ var stockStr = "";
 				if (rl) rl.innerHTML  = "Rate limit...";
 			}
 		  })
-		  .catch(err => console.error("Fehler beim Abrufen:", err));
+		  .catch(err => console.error("Error requiering: ", err));
 
 		const url2 = `https://www.alphavantage.co/query?function=TIME_SERIES_MONTHLY&symbol=${symbol}&apikey=${apiKey}`;
 
@@ -25,7 +25,7 @@ var stockStr = "";
 		  .then(data => {
 			const series = data["Monthly Time Series"];
 			if (!series) {
-			  console.log("Keine Daten gefunden");
+			  console.log("No data found...");
 			  
 			  return;
 			}

@@ -23,7 +23,7 @@ document.getElementById('fullscreenFormModal').addEventListener('shown.bs.modal'
 document.getElementById("settingsForm").addEventListener("submit", function (event) {
   event.preventDefault(); // Disable standard interaction
 
-  console.log("Formular wurde abgesendet");
+  console.log("Formular was sent.");
 
   // Sava data to local storage
   localStorage.setItem("title", document.getElementById("titleInput").value);
@@ -47,6 +47,6 @@ document.getElementById("settingsForm").addEventListener("submit", function (eve
   modal.hide();
 
   // Display feedback
-  alert("Danke! Deine Daten wurden gespeichert. Die Seite wird nun neu geladen!");
+  alert("Thank you very much! Your data has been saved. The page will now be reloaded!");
   location.reload();
 });
