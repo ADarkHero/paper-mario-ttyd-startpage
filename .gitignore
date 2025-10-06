@@ -3,3 +3,5 @@
 Dockerfile
 /ext1
 /txt
+pmttyd-settings.json
+docker_ssh.txt
